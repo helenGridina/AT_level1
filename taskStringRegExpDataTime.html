@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>String, RegExp, DataTime
+        </title>
+    </head>
+    <ol>
+        <li>    Дана строка 'ahb acb aeb aeeb adcb axeb'. Напишите регулярное выражение, которое найдет строки ahb, acb, aeb по     шаблону: буква 'a', любой символ, буква 'b'
+        </li>
+        <li>
+                Дана строка '2+3 223 2223'. Напишите регулярку, которая найдет строку 2+3, не захватив остальные
+        </li>
+        <li>
+                Получить день, месяц и год текущей даты и по отдельности вывести в консоль
+        </li>
+    </ol>
+    
+    <script>
+        let string='ahb acb aeb aeeb adcb axeb';
+        let regexp=/a.b/g;
+        let matchStr=string.match(regexp);
+        console.log(matchStr);
+        
+        
+        let num='2+3 223 2223';
+        let reg=/2\+3/g;
+        let matchNum=num.match(reg);
+        console.log(matchNum);
+        
+        let now=new Date();
+        console.log("Day "+now.getDate());
+        console.log("Month "+now.getMonth());
+        console.log("Year "+now.getFullYear());
+     </script>
+</html>
+    

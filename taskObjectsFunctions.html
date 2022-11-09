@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Objects and Functions
+        </title>
+    </head>
+    <ol>
+        <li>Создать объект car, добавить к нему свойство color со значением 'черный'</li>
+        <li>Изменить свойство color объекта car на 'зеленый'</li>
+        <li>В объект car добавить свойство power, которое является функцией и выводит в консоль мощность двигателя</li>
+        <li>На склад принимают груши и яблоки, напишите функцию, которая возвращает результат сложения количества принятых груш и яблок</li>
+        <li> В терминале оплаты сохранено ваше имя, напишите функцию для определения имени в терминале(если вы ввели ваше имя, то привет + имя, если нет, то нет такого имени)</li>
+        <li>Напишите функцию вычисления типа аргумента и вывод типа в консоль</li>
+        <li>Напишите функцию, которая определяет является ли число простым или нет</li>
+    </ol>
+    <script>
+        let car=new Object();
+        car.color="black";
+        
+        
+        document.write("<br/>1. car=",car );
+        document.write("<br/>car.color=",car.color);
+        
+        car.color="green";
+        document.write("<br/>2. car.color=",car.color);
+        
+        car.power=function(){
+            console.log("3. Power=200");
+        };
+        car.power();
+        
+        car.amountFruit=function(a,p){
+            return(a+p);
+        };
+        
+        document.write("<br/>4. amount fruit =",car.amountFruit(10,20));
+        
+        car.customer = function(nameCustomer) {
+            let name="Elena";
+            if (name == nameCustomer) {
+                document.write("<br/>5.  Hello, " + nameCustomer + "!")
+            } else {
+                document.write("<br/>5.No such name.")
+            }
+        }
+
+        car.customer("Elena");
+        car.customer("Helen");
+
+        car.typeArg=function(arg){
+            console.log("6. type arg=",typeof(arg));
+        };
+        car.typeArg("car");
+        car.typeArg(5);
+        
+        
+        car.simple=function(n){
+            if (n > 1)  {
+                for ( i = 2; i < n; i++)
+                      if (n % i == 0) 
+                        return false;
+                return true;
+            }
+            else 
+              return false;
+        };
+        
+        document.write("<br/>7. 7 simple =",car.simple(7));
+        document.write("<br/>7. 9 simple =",car.simple(9));
+        
+         </script>
+</html>
+    

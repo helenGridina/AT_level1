@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Exception handling
+        </title>
+    </head>
+    <ol>
+  <li>В try catch конструкцию завернуть код: console.log(a), let a = 3. 
+  И вывести ошибку – ‘let перед использованием нужно объявить’.</li>
+  <li>При выполнении 1/0  выводить ошибку 'на ноль делить нельзя'</li>
+    </ol>
+    <script>
+       try {
+           console.log(a);
+           let a = 3;
+       } catch(e) {
+           console.log('Ошибка! let перед использованием нужно объявить!'); 
+       }
+        
+    function div(x, y) {
+	   if (y !== 0) {
+		return x / y;
+	   } else {
+		throw new Error('Ошибка! Hа ноль делить нельзя!');
+	       }
+    }
+    
+    console.log(div(10,2));
+    console.log(div(10,0));
+
+    </script>
+</html>
+    

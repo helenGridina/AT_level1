@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Arrays and Cycles
+        </title>
+    </head>
+    <ol>
+        <li>Дан массив состоящий из названий фильмов, выполните перебор массива с выводом в консоль названия каждого фильма</li>
+        <li>Дан массив производителей автомобилей, преобразовать массив в строку и обратно в массив</li>
+        <li>Дан массив имен ваших знакомых, добавить к каждому элементу массива слова hello</li>
+        <li>Преобразовать числовой массив в Boolean</li>
+        <li>Отсортировать массив [1,6,7,8,3,4,5,6] по убыванию</li>
+        <li>Отфильтровать массив [1,6,7,8,3,4,5,6] по значению >3</li>
+        <li>Написать функцию, которая принимает два параметра - массив и число и выводит индекс элемента массива равный числу</li>
+        <li>Реализовать цикл, который будет выводить число а, пока оно не станет меньше 10</li>
+        <li>Реализовать цикл, который выводит в консоль простые числа</li>
+        <li>Реализовать цикл, который выводит в консоль нечетные числа</li>
+    </ol>
+    <script>
+        let arrFilms=new Array();
+        arrFilms=["Smile","Ticket to paradise","Halloween ends","Till","The woman king"];
+        for(let key in arrFilms){
+            console.log(arrFilms[key]);
+        }
+        
+        let arrCars=["VW","BMW","Audi","Lada","Renault"];
+        let strCars=String(arrCars);
+        console.log(strCars);
+        let arrCarsNew=strCars.split(",");
+        for(let key in arrCarsNew){
+            console.log(arrCarsNew[key]);
+        }
+        
+        let friends=["Aliona","Iryna","Sergey","Ludmila","Tatyana"];
+        for(let key in friends){
+            friends[key]="hello "+ friends[key];
+            console.log(friends[key]);
+        }
+        
+        let nums=[0,1,2,3,4,5,6]
+        let numsB=[];
+        for(let key in nums){
+              numsB[key]=Boolean(nums[key]);
+              console.log(nums[key], numsB[key]);
+        }  
+        
+        let ar=[1,6,7,8,3,4,5,6];
+        ar.sort((a,b)=>b-a);
+        console.log(ar);
+          
+        let a=ar.filter(num=>num>3);
+        console.log(a);
+        
+        function arrNum(arr,num){
+          for(let key in arr){
+             if (arr[key]==num)
+              console.log(arr[key], num);
+          }
+        };
+        
+        let arr=[1,6,7,3,3,4,5,6]; 
+        arrNum(arr,3);
+            
+        let num;
+        num = 15;
+        while(num>=10)
+            {
+                console.log(num--);
+            }
+        
+        for(let i=1000;i>1;i--){
+            flag=0;
+            for(let j=i-1;j>1;j--){
+             if(i%j==0){
+                 flag=1;
+             }
+            }
+            if (flag==0){
+             console.log(i);
+            }
+        }
+        
+        for(i=1;i<100;i+=2)
+            console.log(i);       
+         </script>
+</html>
+    
